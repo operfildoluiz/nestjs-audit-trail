@@ -1,10 +1,14 @@
 {
   "name": "nestjs-audit-trail-workspace",
-  "version": "0.0.1",
-  "description": "",
-  "author": "",
-  "private": true,
-  "license": "UNLICENSED",
+  "version": "1.0.0",
+  "description": "Lightweight audit trail module for NestJS",
+  "author": "Luiz Gonçalves <dev.luizh@gmail.com>",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/operfildoluiz/nestjs-audit-trail.git"
+  },
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"test/**/*.ts\" \"libs/**/*.ts\"",
