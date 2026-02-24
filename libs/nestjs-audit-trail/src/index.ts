@@ -1,3 +1,7 @@
+export {
+  AuditTrailModule,
+  type AuditTrailModuleOptions,
+} from './audit-trail.module';
 export * from './nestjs-audit-trail.module';
 export * from './nestjs-audit-trail.service';
 export * from './types';
