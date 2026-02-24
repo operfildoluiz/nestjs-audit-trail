@@ -1,8 +1,8 @@
 {
   "name": "nestjs-audit-trail",
-  "version": "0.1.0",
-  "description": "Storage-agnostic deterministic audit trail for NestJS APIs",
-  "author": "",
+  "version": "1.0.0",
+  "description": "Lightweight audit trail module for NestJS",
+  "author": "Luiz Gonçalves <dev.luizh@gmail.com>",
   "license": "MIT",
   "main": "index.js",
   "types": "index.d.ts",
@@ -21,8 +21,12 @@
     "rxjs": "^7.0.0"
   },
   "peerDependenciesMeta": {
-    "reflect-metadata": { "optional": false },
-    "rxjs": { "optional": false }
+    "reflect-metadata": {
+      "optional": false
+    },
+    "rxjs": {
+      "optional": false
+    }
   },
   "engines": {
     "node": ">=18"
@@ -36,6 +40,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/nestjs-audit-trail.git"
+    "url": "https://github.com/operfildoluiz/nestjs-audit-trail.git"
   }
 }
