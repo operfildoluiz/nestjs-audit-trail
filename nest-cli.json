@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "monorepo": true,
+  "projects": {
+    "nestjs-audit-trail": {
+      "type": "library",
+      "root": "libs/nestjs-audit-trail",
+      "entryFile": "index",
+      "sourceRoot": "libs/nestjs-audit-trail/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/nestjs-audit-trail/tsconfig.lib.json"
+      }
+    }
+  }
+}
