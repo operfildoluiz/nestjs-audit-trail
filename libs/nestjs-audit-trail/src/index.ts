@@ -4,3 +4,4 @@ export * from './types';
 export * from './interfaces';
 export * from './hashing';
 export * from './services';
+export * from './decorators';
