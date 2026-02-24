@@ -1,0 +1,41 @@
+{
+  "name": "nestjs-audit-trail",
+  "version": "0.1.0",
+  "description": "Storage-agnostic deterministic audit trail for NestJS APIs",
+  "author": "",
+  "license": "MIT",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "require": "./index.js",
+      "import": "./index.js",
+      "default": "./index.js"
+    }
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^10.0.0 || ^11.0.0",
+    "@nestjs/core": "^10.0.0 || ^11.0.0",
+    "reflect-metadata": "^0.2.0",
+    "rxjs": "^7.0.0"
+  },
+  "peerDependenciesMeta": {
+    "reflect-metadata": { "optional": false },
+    "rxjs": { "optional": false }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "nestjs",
+    "audit",
+    "audit-trail",
+    "compliance",
+    "storage-agnostic"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/nestjs-audit-trail.git"
+  }
+}

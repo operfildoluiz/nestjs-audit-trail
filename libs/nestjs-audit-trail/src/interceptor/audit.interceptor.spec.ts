@@ -10,7 +10,10 @@ describe('AuditInterceptor', () => {
   let auditService: jest.Mocked<Pick<AuditService, 'record'>>;
   let reflector: Reflector;
 
-  const createMockContext = (handler: unknown, request: Record<string, unknown> = {}): ExecutionContext =>
+  const createMockContext = (
+    handler: unknown,
+    request: Record<string, unknown> = {},
+  ): ExecutionContext =>
     ({
       getHandler: () => handler,
       switchToHttp: () => ({
@@ -30,7 +33,7 @@ describe('AuditInterceptor', () => {
 
   it('passes through when handler has no @Audit metadata', (done) => {
     interceptor = new AuditInterceptor(
-      auditService as AuditService,
+      auditService as unknown as AuditService,
       reflector,
       undefined,
     );
@@ -48,9 +51,13 @@ describe('AuditInterceptor', () => {
 
   it('calls auditService.record when handler has @Audit metadata', (done) => {
     const handler = function audited() {};
-    Reflect.defineMetadata(AUDIT_METADATA_KEY, { action: 'CREATE', entity: 'User' }, handler);
+    Reflect.defineMetadata(
+      AUDIT_METADATA_KEY,
+      { action: 'CREATE', entity: 'User' },
+      handler,
+    );
     interceptor = new AuditInterceptor(
-      auditService as AuditService,
+      auditService as unknown as AuditService,
       reflector,
       undefined,
     );
