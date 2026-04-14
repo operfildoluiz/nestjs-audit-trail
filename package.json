@@ -22,8 +22,8 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "prepublish:lib": "npm run build && node -e \"const fs=require('fs'); fs.copyFileSync('libs/nestjs-audit-trail/package.json','dist/package.json'); try{fs.copyFileSync('README.md','dist/README.md');}catch(e){}\" && node -e \"const fs=require('fs'); fs.readdirSync('dist').filter(f=>f.endsWith('.tsbuildinfo')).forEach(f=>fs.unlinkSync('dist/'+f));\"",
-    "publish:lib": "npm run prepublish:lib && npm publish --prefix dist"
+    "pack:lib": "npm --prefix libs/nestjs-audit-trail run pack:dry-run",
+    "publish:lib": "npm --prefix libs/nestjs-audit-trail publish"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
