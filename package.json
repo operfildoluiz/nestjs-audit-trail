@@ -1,6 +1,6 @@
 {
   "name": "nestjs-audit-trail-workspace",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight audit trail module for NestJS",
   "author": "Luiz Gonçalves <dev.luizh@gmail.com>",
   "private": false,
